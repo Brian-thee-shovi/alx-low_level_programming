@@ -2,10 +2,13 @@
 
 
 	/**
-	 * Displays the time in 24-hour format for every minute in a
-	 * day of Jack Bauer, from 00:00 to 23:59
+	 * jack_bauer - Count from 00:00 to 23:59
+	 *
+	 * @void: This is the entry
+	 *
+	 * Return: Always 0.
 	 */
-	void jack_bauer(void);
+	void jack_bauer(void)
 	{
 		int i, j;
 
