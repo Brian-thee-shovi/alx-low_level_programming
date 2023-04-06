@@ -12,7 +12,7 @@
 
 listint_t *add_nodeint(listint_t **head, const int n)
 {
-	listint_t *tooday;
+	listint_t *today;
 
 	today = malloc(sizeof(listint_t));
 	if (!today)
