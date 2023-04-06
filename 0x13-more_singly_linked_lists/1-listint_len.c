@@ -9,10 +9,10 @@
 
 size_t listint_len(const listint_t *h)
 {
-size_t num_node = 0;
+size_t many_men = 0;
 
 for (; h != NULL; h = h->next)
-	num_node++;
+	many_men++;
 
-return (num_node);
+return (many_men);
 }
