@@ -10,29 +10,29 @@
  */
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 {
-	unsigned int i;
-	listint_t *new;
+	unsigned int f;
+	listint_t *lex;
 	listint_t *temp = *head;
 
-	new = malloc(sizeof(listint_t));
-	if (!new || !head)
+	lex = malloc(sizeof(listint_t));
+	if (!lex || !head)
 		return (NULL);
-	new->n = n;
-	new->next = NULL;
+	lex->n = n;
+	lex->next = NULL;
 
 	if (idx == 0)
 	{
-		new->next = *head;
-		*head = new;
-		return (new);
+		lex->next = *head;
+		*head = lex;
+		return (lex);
 	}
-	for (i = 0; temp && i < idx; i++)
+	for (f = 0; temp && f < idx; f++)
 	{
-		if (i == idx - 1)
+		if (f == idx - 1)
 		{
-			new->next = temp->next;
-			temp->next = new;
-			return (new);
+			lex->next = temp->next;
+			temp->next = lex;
+			return (lex);
 		}
 		else
 			temp = temp->next;
