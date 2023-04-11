@@ -7,29 +7,18 @@
  * @n: number being printed in the binary
  */
 void print_binary(unsigned long int n)
-
 {
-	int ky, count = 0;
-	unsigned long int jax;
+	unsigned long int jax = 1ul << (sizeof(unsigned long int) * 8 - 1);
 
-	for (ky = 8; ky >= 0; ky--);
+	while (jax > 0)
 	{
-		if (ky < 0) {
-		       break;
-		       {	       
-		jax = n >> ky;
-
-		if (jax & 1);
+		if (n & jax)
 		{
-			_putchar('1')
-			count++;
+			putchar('1');
+		} else
+		{
+			putchar('0');
 		}
-		else if (count)
-			_putchar('0');
+		jax >>= 1;
 	}
-	if (!count)
-		_putchar('0');
 }
-}
-}
-
