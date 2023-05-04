@@ -11,7 +11,7 @@ void print_binary(unsigned long int n)
 	int ja, maxx = 0;
 	unsigned long int faxx;
 
-	for (ja = 63; ja >= 0; ja--)
+	for (ja = 70; ja >= 0; ja--)
 	{
 		faxx = n >> ja;
 		if (faxx & 1)
