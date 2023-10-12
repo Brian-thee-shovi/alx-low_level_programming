@@ -1,14 +1,14 @@
 #include <stdio.h>
 #include "search_algos.h"
 /**
- * binary_recursion - searches for value recursively
+ * advanced_binary_recursive - searches for value recursively
  * @array: array to search
  * @left: begining of an array
  * @right: end of an array
  * @value: value of an array to search
  * Return: index of the found value, -1 if not found
  */
-int binary_recursion(int *array, size_t left, size_t right, int value)
+int advanced_binary_recursive(int *array, size_t left, size_t right, int value)
 {
 	size_t k;
 
@@ -24,8 +24,8 @@ int binary_recursion(int *array, size_t left, size_t right, int value)
 	if (array[k] == value && (k == left || array[k - 1] != value))
 		return (k);
 	if (array[k] >= value)
-		return (binary_recursion(array, left, k, value));
-	return (binary_recursion(array, k + 1, right, value));
+		return (advanced_binary_recursive(array, left, k, value));
+	return (advanced_binary_recursive(array, k + 1, right, value));
 }
 
 /**
@@ -39,5 +39,5 @@ int advanced_binary(int *array, size_t size, int value)
 {
 	if (array == NULL || size == 0)
 		return (-1);
-	return (binary_recursion(array, 0, size - 1, value));
+	return (advanced_binary_recursive(array, 0, size - 1, value));
 }

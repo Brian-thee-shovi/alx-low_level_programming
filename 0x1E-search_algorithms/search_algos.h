@@ -30,6 +30,6 @@ listint_t *jump_list(listint_t *list, size_t size, int value);
 int binary_recursion(int *array, size_t left, size_t right, int value);
 void print_array(int *array, size_t start, size_t end);
 int binary_search2(int *array, size_t left, size_t right, int value);
-
+int advanced_binary_recursive(int *array, size_t left, size_t right, int alue);
 
 #endif /*SEARCH_ALGOS_H*/
